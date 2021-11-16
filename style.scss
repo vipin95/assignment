@@ -1,0 +1,43 @@
+@use 'sass:math';
+$whiteColor: white;
+@mixin mixing($textColor: red) {
+  color: $textColor;
+}
+%inheritance{
+  color: yellow;
+}
+%colorWhite{
+  color: $whiteColor;
+}
+
+body{
+  background-color: black;
+}
+.mda{
+  @include mixing;
+}
+.mpda{
+  @include mixing($textColor: green);
+}
+.inheritance{
+  @extend %inheritance;
+}
+.width{
+  @extend %colorWhite;
+  width: math.div(10, 100) * 100%;
+}
+.role{
+  @extend %colorWhite;  
+}
+div[role1=main1]{
+  background-color: red;
+}
+div[role=complementary1]{
+  background-color: green;
+}
+h1{
+  @extend %colorWhite;
+  span{
+    color: green;
+  }
+}
