@@ -1,37 +1,99 @@
-.inheritance {
-  color: yellow;
-}
-
-h1, .role, .width {
-  color: white;
+.row, .rowHeader {
+  margin-top: 0px;
 }
 
 body {
-  background-color: black;
+  background-color: #e3e1e1;
 }
 
-.mda {
-  color: red;
+.container {
+  padding: 50px 60px;
+  width: 1240px;
+  margin: 0 auto;
+  border-top: solid black 6px;
+  background-color: white;
 }
 
-.mpda {
-  color: green;
+.listStyle {
+  list-style-type: none;
+  padding: 0px;
 }
 
-.width {
-  width: 10%;
+.subHeading {
+  font-size: 22px;
+  letter-spacing: 1px;
 }
 
-div[role1=main1] {
-  background-color: red;
+.profile-img {
+  width: 120px;
 }
 
-div[role=complementary1] {
-  background-color: green;
+.rowHeader {
+  overflow: hidden;
 }
 
-h1 span {
-  color: green;
+.row {
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.left {
+  float: left;
+  width: 70%;
+}
+
+.right {
+  float: right;
+  width: 30%;
+}
+
+.experience {
+  color: #8e8b8b;
+  letter-spacing: 3px;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.designation {
+  font-size: 19px;
+  margin-bottom: 5px;
+}
+
+.companyNameAndText {
+  font-size: 16px;
+  color: #413f3f;
+  margin-bottom: 5px;
+}
+
+.dateRange {
+  color: #8e8b8b;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+ul li p {
+  margin: 0px;
+}
+
+ul {
+  margin-top: 0px;
+  margin-bottom: 32px;
+}
+
+.rightHeading {
+  color: #808080;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.rightText {
+  color: #8e8b8b;
+  margin-bottom: 10px;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin-bottom: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

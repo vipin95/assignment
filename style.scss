@@ -1,43 +1,92 @@
-@use 'sass:math';
-$whiteColor: white;
-@mixin mixing($textColor: red) {
-  color: $textColor;
+@use 'base';
+$letterSpacing3px: 3px;
+$colorGray : base.$colorGray;
+$margin_Bottom_of_p: 5px;
+@mixin backGroundColor($color: red) {
+  background-color: $color;
 }
-%inheritance{
-  color: yellow;
+%rowBodyMarginTop {
+  margin-top: 0px;
 }
-%colorWhite{
-  color: $whiteColor;
-}
-
 body{
-  background-color: black;
+  @include backGroundColor($color: rgb(227, 225, 225))
 }
-.mda{
-  @include mixing;
+.container{
+  padding: 50px 60px;
+  width: 1240px;
+  margin: 0 auto;
+  border-top: solid black 6px;
+  @include backGroundColor($color: white);
 }
-.mpda{
-  @include mixing($textColor: green);
+.listStyle{
+  list-style-type:none;
+  padding: 0px;
 }
-.inheritance{
-  @extend %inheritance;
+.subHeading{
+  font-size: 22px;
+  letter-spacing: 1px;
 }
-.width{
-  @extend %colorWhite;
-  width: math.div(10, 100) * 100%;
+.profile-img{
+  width: 120px;
 }
-.role{
-  @extend %colorWhite;  
+.rowHeader{
+  overflow:hidden;
+  @extend %rowBodyMarginTop;
 }
-div[role1=main1]{
-  background-color: red;
+.row{
+  overflow:hidden;
+  @extend %rowBodyMarginTop;
+  margin-top: 40px;
 }
-div[role=complementary1]{
-  background-color: green;
+.left{
+  float: left;
+  width: 70%;
+}
+.right{
+  float: right;
+  width: 30%;
+}
+.experience{
+  color: $colorGray;
+  letter-spacing: $letterSpacing3px;
+  font-size: 13px;
+  margin-bottom: $margin_Bottom_of_p;
+}
+.designation{
+  font-size: 19px;
+  margin-bottom: $margin_Bottom_of_p;
+}
+.companyNameAndText{
+  font-size: 16px;
+  color: rgb(65, 63, 63);
+  margin-bottom: $margin_Bottom_of_p;
+}
+.dateRange{
+  color: $colorGray;
+  font-size: 13px;
+  margin-bottom: $margin_Bottom_of_p;
+}
+ul{
+  li{
+    p{
+      margin: 0px;
+    }
+  }
+}
+ul{
+  margin-top: 0px;
+  margin-bottom: 32px;
+}
+.rightHeading{
+  color: #808080;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.rightText{
+  color: $colorGray;
+  margin-bottom: 10px;
 }
 h1{
-  @extend %colorWhite;
-  span{
-    color: green;
-  }
+  letter-spacing: 1px;
+  margin-bottom: 15px;
 }
